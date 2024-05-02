@@ -59,13 +59,27 @@ svg.append("g")
 function yAxis(g) {
   g.attr("transform", `translate(${margin.left},0)`)
     .call(d3.axisLeft(y))
-    .attr("font-size", '20px');
+    .attr("font-size", '20px')
+    .append("text")
+    .attr("x", -margin.left)
+    .attr("y", margin.top - 20)
+    .attr("fill", "black")
+    .attr("text-anchor", "start")
+    .attr("font-size", "20px")
+    .text("Number of Chocolate Bars");
 }
 
 function xAxis(g) {
   g.attr("transform", `translate(0,${height - margin.bottom})`)
     .call(d3.axisBottom(x))
-    .attr("font-size", '20px');
+    .attr("font-size", '20px')
+    .append("text")
+    .attr("x", width / 2)
+    .attr("y", margin.bottom - 10)
+    .attr("fill", "black")
+    .attr("text-anchor", "middle")
+    .attr("font-size", "20px")
+    .text("Brands of Chocolate");
 }
 
 svg.append("g").call(xAxis);
