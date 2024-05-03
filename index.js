@@ -75,7 +75,7 @@ function xAxis(g) {
     .attr("font-size", '20px')
     .append("text")
     .attr("x", width / 2)
-    .attr("y", margin.bottom + 100)
+    .attr("y", margin.bottom + 30) // Adjusted y position
     .attr("fill", "black")
     .attr("text-anchor", "middle")
     .attr("font-size", "20px")
